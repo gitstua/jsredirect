@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <script>
+        function myFunction() {
+            //read anchor from url
+            let anchor = window.location.hash.substring(1);
+
+            //if anchor is empty, set anchor to home
+            if (anchor == "") {
+                exit;
+            }
+           
+            //todo: find the A tag which has the title of the anchor and redirect there...
+
+            if (anchor.toLowerCase() == "rick") {
+                location = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+            }
+            else if (anchor.toLowerCase() == "coplaybooks") {
+                location = "https://github.com/github/customer-outcomes/tree/main/playbooks";
+            }
+            else if (anchor.toLowerCase() == "ceplaybooks") {
+                location = "https://github.com/github/customer-success-engagement/tree/main/Playbooks";
+            }
+            
+
+
+            alert(anchor);
+        }
+    </script>
+    </head>
+<body onload="myFunction()">
+
+<h1>Current links</h1>
+<!--
+    The links below are used to redirect from the url of the page
+    e.g. if you go to https://www.google.com/#rick, the page will 
+    redirect to the href for the A tag with that title
+-->
+
+<ul>
+    <li><a title="rick" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
+        Rickroll myself</a></li>
+    <li><a title="coplaybooks" href="https://github.com/github/customer-outcomes/tree/main/playbooks">
+        Customer Outcomes Playbooks</a></li>
+    <li><a title="ceplaybooks" href="https://github.com/github/customer-success-engagement/tree/main/Playbooks">
+        CEplaybooks</a></li>
+</ul>
+
+
+</body>
+</html>
