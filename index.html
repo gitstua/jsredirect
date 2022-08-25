@@ -13,24 +13,15 @@
 
             //if anchor is empty, set anchor to home
             if (anchor == "") {
-                exit;
+                return;
             }
            
             //todo: find the A tag which has the title of the anchor and redirect there...
 
-            if (anchor.toLowerCase() == "rick") {
-                location = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
-            }
-            else if (anchor.toLowerCase() == "coplaybooks") {
-                location = "https://github.com/github/customer-outcomes/tree/main/playbooks";
-            }
-            else if (anchor.toLowerCase() == "ceplaybooks") {
-                location = "https://github.com/github/customer-success-engagement/tree/main/Playbooks";
-            }
-            
-
-
-            alert(anchor);
+            const elements = document.querySelectorAll('[title="' + anchor + '"]');
+            const href = elements[0].href;
+            if (href)
+                window.location.href = href;
         }
     </script>
     </head>
@@ -39,9 +30,14 @@
 <h1>Current links</h1>
 <!--
     The links below are used to redirect from the url of the page
-    e.g. if you go to https://www.google.com/#rick, the page will 
+    e.g. if you go to https://example.com/#rick, the page will 
     redirect to the href for the A tag with that title
 -->
+
+<p>
+    A list of links is below. Should you wish to redirect automatically then take this url and
+    add the popup title text to the end of the url like this: https://example.com#rick
+</p>
 
 <ul>
     <li><a title="rick" href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
