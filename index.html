@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 
     <script>
+        window.addEventListener('hashchange', () => {
+            console.log('The hash has changed!')
+            myFunction();
+        }, false);
+    
         function myFunction() {
             //read anchor from url
             let anchor = window.location.hash.substring(1);
