@@ -23,16 +23,18 @@
                 return;
             }
            
-            const elements = document.querySelectorAll('[title="' + anchor + '"]');
-            const href = elements[0].href;
-            if (href)
-                window.location.href = href;
+            const elements = document.querySelectorAll('[title="' + anchor + '" i]');
+            if (elements){
+                const href = elements[0].href;
+                if (href)
+                    window.location.href = href;
+            }
         }
     </script>
     </head>
 <body onload="myFunction()">
 
-<h1>Current links</h1>
+<h1>These are the links you can redirect to...</h1>
 <!--
     The links below are used to redirect from the url of the page
     e.g. if you go to https://bye.cyou/#rick, the page will 
