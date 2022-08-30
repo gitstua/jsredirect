@@ -33,8 +33,11 @@
     </script>
     </head>
 <body onload="myFunction()">
-<h1>bye.cyou - a static page with redirect capabilities</h1>
-
+    <header>
+        <h1>bye.cyou - a static page with redirect capabilities</h1>
+        <p>Visit this page for a list of all links or simple pass a "fragment" in the url to auto-redirect</p> 
+    </header>
+    
 <h2>Why is this a thing?</h2>
 <p>
 The problem with web redirects is they need a server to store the list of outbound links. This method allows you to redirect by just visiting this staticly hosted page.
@@ -43,11 +46,7 @@ Updates to the list can be approved using a Pull Request and Branch Protection e
 </p>
 
 <h2>These are the links you can redirect to...</h2>
-<!--
-    The links below are used to redirect from the url of the page
-    e.g. if you go to https://bye.cyou/#rick, the page will 
-    redirect to the href for the A tag with that title
--->
+
 
 <p>
     A list of links is below. Should you wish to redirect automatically then take this url and
@@ -68,6 +67,7 @@ Updates to the list can be approved using a Pull Request and Branch Protection e
         
 </ul>
 
-
+<!-- The links below are used to redirect from the url of the page e.g. if you go to https://bye.cyou/#rick, the page will 
+    redirect to the href for the A tag with that title -->
 </body>
 </html>
