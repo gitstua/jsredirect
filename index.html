@@ -26,8 +26,12 @@
             const elements = document.querySelectorAll('[title="' + anchor + '" i]');
             if (elements){
                 const href = elements[0].href;
-                if (href)
-                    window.location.href = href;
+                if (href) {
+                     setTimeout(function() {
+                        document.getElementById('message').innerHTML = "You are being redirected...";
+                        // Put your redirection code here
+                        window.location.href = href;
+                    }, 5000);
             }
         }
     </script>
@@ -37,6 +41,8 @@
         <h1>bye.cyou - a static page with redirect capabilities</h1>
         <p>Visit this page for a list of all links or simply pass a "fragment" in the url to auto-redirect</p> 
     </header>
+
+<div id="message"></div>
     
 <h2>Why is this a thing?</h2>
 <p>
